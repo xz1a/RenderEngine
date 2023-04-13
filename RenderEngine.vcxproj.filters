@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{2127a4be-d788-4a59-a9cf-6737e544967a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\OpenGL">
+      <UniqueIdentifier>{db922dca-7437-41e3-907b-93a3a6f777f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12">
+      <UniqueIdentifier>{bc550d32-3c01-4d4f-aa9c-7f6c434d8239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan">
+      <UniqueIdentifier>{f3c7a34d-35b3-4da1-a17d-b195068adac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{ee3de9d3-39f3-45c6-ae39-83f77fb309bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\DirectX12">
+      <UniqueIdentifier>{d8c50f10-4497-40dd-aea3-b241273e362f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{cf628a24-b0c9-4fe1-8347-2c4eb0f75101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Base">
+      <UniqueIdentifier>{d7dd021e-0e97-49ba-a195-57fd5629c148}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Platform\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="GLWindow.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12Window.cpp">
+      <Filter>Platform\DirectX12</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RenderDevice.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GpuBuffer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPass.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceContext.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuffer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GLWindow.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Platform\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="PipelineState.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12Window.h">
+      <Filter>Platform\DirectX12</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
