@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -118,7 +118,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>C:\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -135,7 +135,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,21 +145,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="DX12Buffer.cpp" />
+    <ClCompile Include="DX12CommandAllocator.cpp" />
+    <ClCompile Include="DX12CommandList.cpp" />
+    <ClCompile Include="DX12RenderDevice.cpp" />
     <ClCompile Include="DX12Window.cpp" />
     <ClCompile Include="GLWindow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandAllocator.h" />
+    <ClInclude Include="CommandList.h" />
+    <ClInclude Include="CommandType.h" />
+    <ClInclude Include="d3dx12.h" />
+    <ClInclude Include="dx12.h" />
+    <ClInclude Include="DX12Buffer.h" />
+    <ClInclude Include="DX12CommandAllocator.h" />
+    <ClInclude Include="DX12CommandList.h" />
+    <ClInclude Include="DX12RenderDevice.h" />
+    <ClInclude Include="DX12Shader.h" />
+    <ClInclude Include="DX12SwapChain.h" />
     <ClInclude Include="DX12Window.h" />
-    <ClInclude Include="DeviceContext.h" />
+    <ClInclude Include="Platform.h" />
     <ClInclude Include="FrameBuffer.h" />
     <ClInclude Include="GLWindow.h" />
-    <ClInclude Include="GpuBuffer.h" />
+    <ClInclude Include="Buffer.h" />
     <ClInclude Include="PipelineState.h" />
     <ClInclude Include="RenderDevice.h" />
     <ClInclude Include="RenderPass.h" />
-    <ClInclude Include="RenderSystem.h" />
+    <ClInclude Include="Result.h" />
+    <ClInclude Include="SwapChain.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

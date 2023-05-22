@@ -5,10 +5,11 @@
 
 class GLWindow : public Window {
 public:
-	GLWindow(const WindowParameter& p_parameter);
+	GLWindow(const WindowDescription& p_parameter);
 	virtual void Initialize() override;
+	inline GLFWwindow* GetWindowInstance() const { return window_handle; };
 protected:
 private:
-	GLFWwindow* handle;
+	GLFWwindow* window_handle;
 };
 #endif

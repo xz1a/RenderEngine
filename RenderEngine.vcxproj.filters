@@ -16,9 +16,6 @@
     <Filter Include="Graphics">
       <UniqueIdentifier>{2127a4be-d788-4a59-a9cf-6737e544967a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Graphics\OpenGL">
-      <UniqueIdentifier>{db922dca-7437-41e3-907b-93a3a6f777f2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Graphics\DirectX12">
       <UniqueIdentifier>{bc550d32-3c01-4d4f-aa9c-7f6c434d8239}</UniqueIdentifier>
     </Filter>
@@ -37,6 +34,75 @@
     <Filter Include="Platform\Base">
       <UniqueIdentifier>{d7dd021e-0e97-49ba-a195-57fd5629c148}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{9708ff60-cd71-4de1-ae6b-55386a4e637b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base">
+      <UniqueIdentifier>{6622f229-8c6e-40b7-8d34-369d5bd8b91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{c55d8fef-3536-4392-aaab-ff74e45ceef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\SwapChain">
+      <UniqueIdentifier>{3b2dd501-3b33-4c31-86ba-b18db2470f7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Buffer">
+      <UniqueIdentifier>{153cf5dc-a6d9-4722-9de5-58b32dd4caa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Device">
+      <UniqueIdentifier>{4679b270-70de-4160-b6a9-d286c866da25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Buffer">
+      <UniqueIdentifier>{29d3de91-d745-4742-bb7f-7868ca6dad96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\SwapChain">
+      <UniqueIdentifier>{e286d038-9882-4adc-a472-b38fc654a58f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\PipelineState">
+      <UniqueIdentifier>{409da47a-2bd3-46cc-9f9f-77dcd76d00d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Shader">
+      <UniqueIdentifier>{06db5de5-9cda-40c1-afee-d670f4dd1e36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Command">
+      <UniqueIdentifier>{b3ba5592-7b0d-447d-8c40-909267452cbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Command\CommandAllocator">
+      <UniqueIdentifier>{0d5e756a-d424-4512-9004-878d3e3d0757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Device">
+      <UniqueIdentifier>{7204e52d-5e67-4407-8c17-1d1d3bd1f657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Command\CommandList">
+      <UniqueIdentifier>{4928cd3a-f83f-4eca-b21b-e2a36f59ea4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Command">
+      <UniqueIdentifier>{16485dfa-3f99-4c7f-b47f-39981e7492dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Command\CommandAllocator">
+      <UniqueIdentifier>{295b70fa-5fe4-40d9-bfaf-d1cdf3dee418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Command\CommandList">
+      <UniqueIdentifier>{03bd8388-ef39-45d0-b9cd-850f48598ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\FrameBuffer">
+      <UniqueIdentifier>{98c2e131-ee25-4566-bb5e-cc8de6b9fb0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\PipelineState">
+      <UniqueIdentifier>{9fc5aecd-4bc4-471d-87dd-62ab539054f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Texture">
+      <UniqueIdentifier>{8bfbafce-c054-4fb5-8cc0-84816e805503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Shader">
+      <UniqueIdentifier>{8fc42023-bc9a-401f-914c-272670a619aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\RenderPass">
+      <UniqueIdentifier>{7d4412a4-fa45-4f64-9cfd-deb723585ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Header">
+      <UniqueIdentifier>{e324483d-7eba-440d-bcf5-f1f80bcb689c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,40 +117,94 @@
     <ClCompile Include="DX12Window.cpp">
       <Filter>Platform\DirectX12</Filter>
     </ClCompile>
+    <ClCompile Include="DX12RenderDevice.cpp">
+      <Filter>Graphics\DirectX12\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffer.cpp">
+      <Filter>Graphics\Base\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12Buffer.cpp">
+      <Filter>Graphics\DirectX12\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12CommandAllocator.cpp">
+      <Filter>Graphics\DirectX12\Command\CommandAllocator</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12CommandList.cpp">
+      <Filter>Graphics\DirectX12\Command\CommandList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RenderDevice.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderSystem.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="GpuBuffer.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderPass.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceContext.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameBuffer.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="GLWindow.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>Platform\Base</Filter>
     </ClInclude>
-    <ClInclude Include="PipelineState.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="DX12Window.h">
       <Filter>Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12SwapChain.h">
+      <Filter>Graphics\DirectX12\SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12Buffer.h">
+      <Filter>Graphics\DirectX12\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12RenderDevice.h">
+      <Filter>Graphics\DirectX12\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.h">
+      <Filter>Graphics\Base\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapChain.h">
+      <Filter>Graphics\Base\SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAllocator.h">
+      <Filter>Graphics\Base\Command\CommandAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12Shader.h">
+      <Filter>Graphics\DirectX12\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12CommandAllocator.h">
+      <Filter>Graphics\DirectX12\Command\CommandAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandType.h">
+      <Filter>Graphics\Base\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice.h">
+      <Filter>Graphics\Base\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandList.h">
+      <Filter>Graphics\Base\Command\CommandList</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12CommandList.h">
+      <Filter>Graphics\DirectX12\Command\CommandList</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuffer.h">
+      <Filter>Graphics\Base\FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="PipelineState.h">
+      <Filter>Graphics\Base\PipelineState</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Graphics\Base\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Graphics\Base\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPass.h">
+      <Filter>Graphics\Base\RenderPass</Filter>
+    </ClInclude>
+    <ClInclude Include="dx12.h">
+      <Filter>Graphics\DirectX12\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dx12.h">
+      <Filter>Graphics\DirectX12\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

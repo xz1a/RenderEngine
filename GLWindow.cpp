@@ -1,10 +1,10 @@
 #include "GLWindow.h"
 
-GLWindow::GLWindow(const WindowParameter& p_parameter) : Window(p_parameter) {
-	handle = nullptr;
+GLWindow::GLWindow(const WindowDescription& p_parameter) : Window(p_parameter) {
+	window_handle = nullptr;
 }
 
 void GLWindow::Initialize() {
 	glfwInit();
-	handle = glfwCreateWindow(width, height, title, nullptr, nullptr);
+	window_handle = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
 }

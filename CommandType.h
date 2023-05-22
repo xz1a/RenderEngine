@@ -1,0 +1,10 @@
+#ifndef _COMMAND_TYPE_H_
+#define _COMMAND_TYPE_H_
+
+enum COMMAND_TYPE{
+	GRAPHICS,
+	COMPUTE,
+	COPY,
+	COUNT
+};
+#endif
