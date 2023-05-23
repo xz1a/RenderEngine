@@ -132,6 +132,9 @@
     <ClCompile Include="DX12CommandList.cpp">
       <Filter>Graphics\DirectX12\Command\CommandList</Filter>
     </ClCompile>
+    <ClCompile Include="DX12SwapChain.cpp">
+      <Filter>Graphics\DirectX12\SwapChain</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GLWindow.h">

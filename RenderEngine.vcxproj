@@ -150,6 +150,7 @@
     <ClCompile Include="DX12CommandAllocator.cpp" />
     <ClCompile Include="DX12CommandList.cpp" />
     <ClCompile Include="DX12RenderDevice.cpp" />
+    <ClCompile Include="DX12SwapChain.cpp" />
     <ClCompile Include="DX12Window.cpp" />
     <ClCompile Include="GLWindow.cpp" />
     <ClCompile Include="main.cpp" />
