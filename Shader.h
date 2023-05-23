@@ -7,9 +7,7 @@ typedef struct ShaderDescription {
 
 class Shader {
 public:
-	virtual ~Shader() {
-
-	}
+	virtual ~Shader() = default;
 private:
 	ShaderDescription description;
 };

@@ -6,6 +6,7 @@ typedef struct RenderPassDescription {
 } RenderPassDescription;
 
 class RenderPass {
-
+public:
+	virtual ~RenderPass() = default;
 };
 #endif

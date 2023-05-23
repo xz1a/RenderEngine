@@ -45,6 +45,18 @@ int main() {
 	upload_buffer_desc.type = BUFFER_TYPE::DEFAULT;
 	DEBUG_IF_FAILED(device->CreateBuffer(upload_buffer_desc, upload_buffer));
 
+	CommandAllocator* allocator;
+	CommandAllocatorDescription allocator_desc;
+	allocator_desc.type = COMMAND_TYPE::GRAPHICS;
+	DEBUG_IF_FAILED(device->CreateCommandAllocator(allocator_desc, allocator));
+
+	CommandList* list;
+	CommandListDescription list_desc;
+	list_desc.allocator = allocator;
+	list_desc.pipeline_state = nullptr;
+	list_desc.type = COMMAND_TYPE::GRAPHICS;
+	DEBUG_IF_FAILED(device->CreateCommandList(list_desc, list));
+
 
 
 	window->Run();

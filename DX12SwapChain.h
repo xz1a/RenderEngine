@@ -3,10 +3,11 @@
 #include "dx12.h"
 #include "SwapChain.h"
 #include "DX12Window.h"
+#include <vector>
 
 class DX12SwapChain : public SwapChain {
 public:
-	DX12SwapChain(const SwapChainDescription& p_description, Microsoft::WRL::ComPtr<IDXGISwapChain> p_swapchain) {
+	DX12SwapChain(const SwapChainDescription& p_description, const Microsoft::WRL::ComPtr<IDXGISwapChain> p_swapchain) {
 		description = p_description;
 		swapchain = p_swapchain;
 	};
@@ -26,5 +27,6 @@ protected:
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain> swapchain;
 	Microsoft::WRL::ComPtr<ID3D12Resource> buffers;
+	std::vector<Microsoft::WRL::ComPtr<ID3D12Resource>> back_buffers;
 };
 #endif

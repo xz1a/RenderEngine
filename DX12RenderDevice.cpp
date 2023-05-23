@@ -154,10 +154,12 @@ RESULT DX12RenderDevice::CreateCommandAllocator(const CommandAllocatorDescriptio
 	}
 
 	Microsoft::WRL::ComPtr<ID3D12CommandAllocator> temp_command_allocator;
-	if (FAILED(device->CreateCommandAllocator(type, IID_PPV_ARGS(temp_command_allocator.GetAddressOf())))) {
-		p_command_allocator = new DX12CommandAllocator(p_description, temp_command_allocator);
+	HRESULT result = device->CreateCommandAllocator(type, IID_PPV_ARGS(temp_command_allocator.GetAddressOf()));
+	if (FAILED(result)) {
 		return RESULT::E_API_CREATE_COMMAND_ALLOCATOR;
 	}
+
+	p_command_allocator = new DX12CommandAllocator(p_description, temp_command_allocator);
 	return RESULT::SUCCESS;
 }
 
@@ -177,10 +179,13 @@ RESULT DX12RenderDevice::CreateCommandList(const CommandListDescription& p_descr
 	}
 
 	Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> temp_command_list;
-	if (FAILED(device->CreateCommandList(0, type, ((DX12CommandAllocator*)p_description.allocator)->GetNative(), pso, IID_PPV_ARGS(temp_command_list.GetAddressOf())))) {
-		p_command_list = new DX12CommandList(p_description, temp_command_list);
+	HRESULT result = device->CreateCommandList(0, type, ((DX12CommandAllocator*)p_description.allocator)->GetNative(), pso, IID_PPV_ARGS(temp_command_list.GetAddressOf()));
+	
+	if (FAILED(result)) {
 		return RESULT::E_API_CREATE_COMMAND_LIST;
 	}
+
+	p_command_list = new DX12CommandList(p_description, temp_command_list);
 	return RESULT::SUCCESS;
 }
 
@@ -194,7 +199,8 @@ RESULT DX12RenderDevice::SubmitCommandList(COMMAND_TYPE p_queue_type, const std:
 }
 
 RESULT DX12RenderDevice::SignalQueue(COMMAND_TYPE p_queue_type, UINT64 p_fence_value) const {
-	if (FAILED(command_queues[p_queue_type]->Signal(fences[p_queue_type].Get(), p_fence_value))) {
+	HRESULT result = command_queues[p_queue_type]->Signal(fences[p_queue_type].Get(), p_fence_value);
+	if (FAILED(result)) {
 		return RESULT::E_QUEUE_SIGNAL;
 	}
 	return RESULT::SUCCESS;

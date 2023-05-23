@@ -6,6 +6,7 @@ typedef struct FrameBufferDescription {
 } FrameBufferDescription;
 
 class FrameBuffer {
-
+public:
+	virtual ~FrameBuffer() = default;
 };
 #endif

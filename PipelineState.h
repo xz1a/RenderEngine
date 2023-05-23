@@ -7,6 +7,7 @@ typedef struct PipelineStateDescription {
 
 class PipelineState {
 public:
+	virtual ~PipelineState() = default;
 private:
 	PipelineStateDescription description;
 };

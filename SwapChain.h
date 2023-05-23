@@ -12,11 +12,13 @@ typedef struct SwapChainDescription {
 
 class SwapChain {
 public:
-	virtual ~SwapChain() {};
+	virtual ~SwapChain() = default;
 	virtual void Reset() = 0;
 	virtual void Present() = 0;
 protected:
-	unsigned int buffer_count;
+	SwapChain(const SwapChainDescription& p_description) : description(p_description), current_buffer(0) {
+
+	}
 	unsigned int current_buffer;
 	SwapChainDescription description;
 };

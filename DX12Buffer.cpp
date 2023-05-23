@@ -1,6 +1,6 @@
 #include "DX12Buffer.h"
 
-DX12Buffer::DX12Buffer(const BufferDescription& p_description, Microsoft::WRL::ComPtr<ID3D12Resource> p_buffer) : Buffer(p_description), buffer(p_buffer) {
+DX12Buffer::DX12Buffer(const BufferDescription& p_description, const Microsoft::WRL::ComPtr<ID3D12Resource> p_buffer) : Buffer(p_description), buffer(p_buffer) {
 
 }
 

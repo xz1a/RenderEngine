@@ -5,7 +5,7 @@
 
 class DX12CommandList : public CommandList {
 public:
-	DX12CommandList(const CommandListDescription& p_description, Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> p_command_list);
+	DX12CommandList(const CommandListDescription& p_description, const Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> p_command_list);
 	~DX12CommandList();
 
 	ID3D12GraphicsCommandList* GetNative();
