@@ -11,6 +11,7 @@ typedef struct WindowDescription {
 class Window {
 public:
 	Window(const WindowDescription& p_parameter);
+	virtual ~Window() = default;
 	virtual void Initialize() = 0;
 	virtual int Run() = 0;
 	inline unsigned int GetWidth() const { return width; };

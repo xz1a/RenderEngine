@@ -1,7 +1,8 @@
 #ifndef _BUFFER_H_
 #define _BUFFER_H_
-#include "Result.h"
+#include "Resource.h"
 #include <iostream>
+#include <memory>
 
 enum BUFFER_TYPE {
 	DEFAULT,
@@ -11,20 +12,28 @@ enum BUFFER_TYPE {
 
 typedef struct BufferDescription {
 	void* data;
-	unsigned int size;
+	unsigned long long size;
 	BUFFER_TYPE type;
 } BufferDescription;
 
-class Buffer {
+class Buffer : public Resource {
 public:
 	virtual ~Buffer() = default;
-	virtual RESULT Map() = 0;
-	virtual RESULT CopyData(unsigned int p_index, unsigned int p_size, const void* data) = 0;
-	virtual RESULT UnMap() = 0;
 protected:
-	Buffer(const BufferDescription& p_description);
-	bool is_mapped;
-	void* mapped_data;
+	Buffer(const BufferDescription& p_description) : Resource(), description(p_description) {
+
+	}
 	BufferDescription description;
 };
+
+typedef struct BufferBarrier {
+	BufferBarrier(Buffer* p_buffer, RESOURCE_STATE p_start_state, RESOURCE_STATE p_end_state) : buffer(p_buffer), start_state(p_start_state), end_state(p_end_state) {
+
+	}
+	RESOURCE_STATE start_state;
+	RESOURCE_STATE end_state;
+	Buffer* buffer;
+} BufferBarrier;
+
+typedef std::shared_ptr<Buffer> BufferPtr;
 #endif

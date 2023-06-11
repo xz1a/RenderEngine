@@ -3,30 +3,19 @@
 #include "dx12.h"
 #include "SwapChain.h"
 #include "DX12Window.h"
+#include "DX12RenderTargetView.h"
 #include <vector>
 
 class DX12SwapChain : public SwapChain {
 public:
-	DX12SwapChain(const SwapChainDescription& p_description, const Microsoft::WRL::ComPtr<IDXGISwapChain> p_swapchain) {
-		description = p_description;
-		swapchain = p_swapchain;
-	};
+	DX12SwapChain(const SwapChainDescription& p_description, const std::vector<Texture*>& p_back_buffers, const std::vector<RenderTargetView*>& p_back_buffer_views, const Microsoft::WRL::ComPtr<IDXGISwapChain> p_swapchain);
+	~DX12SwapChain() override;
 
-	~DX12SwapChain() {
-		swapchain.Reset();
-	}
-
-	void Reset() override {
-		swapchain.Reset();
-	}
-	
-	void Present() override {
-		swapchain->Present(0, 0);
-	}
+	void Reset() override;
+	void Present() override;
 protected:
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain> swapchain;
 	Microsoft::WRL::ComPtr<ID3D12Resource> buffers;
-	std::vector<Microsoft::WRL::ComPtr<ID3D12Resource>> back_buffers;
 };
 #endif

@@ -34,9 +34,6 @@
     <Filter Include="Platform\Base">
       <UniqueIdentifier>{d7dd021e-0e97-49ba-a195-57fd5629c148}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Thread">
-      <UniqueIdentifier>{9708ff60-cd71-4de1-ae6b-55386a4e637b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Graphics\Base">
       <UniqueIdentifier>{6622f229-8c6e-40b7-8d34-369d5bd8b91e}</UniqueIdentifier>
     </Filter>
@@ -51,9 +48,6 @@
     </Filter>
     <Filter Include="Graphics\DirectX12\Device">
       <UniqueIdentifier>{4679b270-70de-4160-b6a9-d286c866da25}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics\Base\Buffer">
-      <UniqueIdentifier>{29d3de91-d745-4742-bb7f-7868ca6dad96}</UniqueIdentifier>
     </Filter>
     <Filter Include="Graphics\Base\SwapChain">
       <UniqueIdentifier>{e286d038-9882-4adc-a472-b38fc654a58f}</UniqueIdentifier>
@@ -91,9 +85,6 @@
     <Filter Include="Graphics\Base\PipelineState">
       <UniqueIdentifier>{9fc5aecd-4bc4-471d-87dd-62ab539054f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Graphics\Base\Texture">
-      <UniqueIdentifier>{8bfbafce-c054-4fb5-8cc0-84816e805503}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Graphics\Base\Shader">
       <UniqueIdentifier>{8fc42023-bc9a-401f-914c-272670a619aa}</UniqueIdentifier>
     </Filter>
@@ -102,6 +93,90 @@
     </Filter>
     <Filter Include="Graphics\DirectX12\Header">
       <UniqueIdentifier>{e324483d-7eba-440d-bcf5-f1f80bcb689c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\Buffer">
+      <UniqueIdentifier>{0bf34f85-08ec-4e1f-a09b-03959900eb09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\Command">
+      <UniqueIdentifier>{e20fc750-5516-47f7-8ebe-979b16fb15c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\Device">
+      <UniqueIdentifier>{6d86b6cd-4c94-4325-af94-807f5a1fd392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\Header">
+      <UniqueIdentifier>{1a1f45e7-0c7a-48eb-8a7f-0c4669af83cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\PipelineState">
+      <UniqueIdentifier>{50579e4f-14ac-4c26-a455-d28188352ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\Shader">
+      <UniqueIdentifier>{14918f07-99ed-4845-a932-0e4948266c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan\SwapChain">
+      <UniqueIdentifier>{a1f857f6-0018-4973-9058-c15222b03585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\DescriptorHeap">
+      <UniqueIdentifier>{4a5eb19c-ba03-46c9-8a58-bb73bc8bc79b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceHeap">
+      <UniqueIdentifier>{4cf09423-6722-490c-9e04-19e35edeae46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\DescriptorHeap">
+      <UniqueIdentifier>{f166bb74-ee00-4145-820b-22c308124997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\ResourceHeap">
+      <UniqueIdentifier>{00acf1ca-331f-40b7-916c-b6f6c3984394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Buffer">
+      <UniqueIdentifier>{29d3de91-d745-4742-bb7f-7868ca6dad96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Texture">
+      <UniqueIdentifier>{8bfbafce-c054-4fb5-8cc0-84816e805503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\Resource">
+      <UniqueIdentifier>{1546557a-b6ab-4ab4-9a15-68ea3c41883b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceState">
+      <UniqueIdentifier>{f42cc250-4e9b-40d3-97b9-7ca144b7f99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Texture">
+      <UniqueIdentifier>{468aabc4-3b6d-42e1-8eb4-2d773d0eb674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\Convertor">
+      <UniqueIdentifier>{d2fc9293-5794-407b-8421-3a80f802514a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\ResourceViews">
+      <UniqueIdentifier>{04d4c3e7-2e89-4f09-b74e-e63c3105fe8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\ResourceViews\RenderTargetView">
+      <UniqueIdentifier>{9057893c-80bc-49b4-9a3d-b18e5e10212c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews">
+      <UniqueIdentifier>{f6d03077-c9b5-4dbf-be18-9c282185c1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews\RenderTargetView">
+      <UniqueIdentifier>{685e3abc-ca2a-457e-a6a0-dffb21a2f758}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX12\FrameBuffer">
+      <UniqueIdentifier>{5de7ede4-a0b1-4555-bf61-5996db079f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews\ShaderResourceView">
+      <UniqueIdentifier>{7685b641-634a-490a-bece-99d296ab1abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews\DepthStencilView">
+      <UniqueIdentifier>{7658696d-bcab-442a-a64f-610d921429d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews\SamplerView">
+      <UniqueIdentifier>{6d2b1ca8-39ec-4187-a412-3f43487895d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews\UnorderedAccessView">
+      <UniqueIdentifier>{d72ff314-6ec1-43f6-81bd-25fe953da97a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\ResourceViews\ConstantBufferView">
+      <UniqueIdentifier>{457ab231-7d30-4664-956e-2fc4eb270c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Base\InputLayout">
+      <UniqueIdentifier>{e057002a-b1b8-4888-a1c5-237e153cdde0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +195,6 @@
     <ClCompile Include="DX12RenderDevice.cpp">
       <Filter>Graphics\DirectX12\Device</Filter>
     </ClCompile>
-    <ClCompile Include="Buffer.cpp">
-      <Filter>Graphics\Base\Buffer</Filter>
-    </ClCompile>
     <ClCompile Include="DX12Buffer.cpp">
       <Filter>Graphics\DirectX12\Buffer</Filter>
     </ClCompile>
@@ -134,6 +206,30 @@
     </ClCompile>
     <ClCompile Include="DX12SwapChain.cpp">
       <Filter>Graphics\DirectX12\SwapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12Shader.cpp">
+      <Filter>Graphics\DirectX12\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12DescriptorHeap.cpp">
+      <Filter>Graphics\DirectX12\DescriptorHeap</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12ResourceHeap.cpp">
+      <Filter>Graphics\DirectX12\ResourceHeap</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12PipelineState.cpp">
+      <Filter>Graphics\DirectX12\PipelineState</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12Texture.cpp">
+      <Filter>Graphics\DirectX12\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12Converter.cpp">
+      <Filter>Graphics\DirectX12\Convertor</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12FrameBuffer.cpp">
+      <Filter>Graphics\DirectX12\FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="DX12RenderTargetView.cpp">
+      <Filter>Graphics\DirectX12\ResourceViews\RenderTargetView</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,9 +259,6 @@
     </ClInclude>
     <ClInclude Include="Platform.h">
       <Filter>Platform</Filter>
-    </ClInclude>
-    <ClInclude Include="Result.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CommandAllocator.h">
       <Filter>Graphics\Base\Command\CommandAllocator</Filter>
@@ -208,6 +301,51 @@
     </ClInclude>
     <ClInclude Include="d3dx12.h">
       <Filter>Graphics\DirectX12\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorHeap.h">
+      <Filter>Graphics\Base\DescriptorHeap</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceHeap.h">
+      <Filter>Graphics\Base\ResourceHeap</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12DescriptorHeap.h">
+      <Filter>Graphics\DirectX12\DescriptorHeap</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12ResourceHeap.h">
+      <Filter>Graphics\DirectX12\ResourceHeap</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12PipelineState.h">
+      <Filter>Graphics\DirectX12\PipelineState</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12RenderTargetView.h">
+      <Filter>Graphics\DirectX12\ResourceViews\RenderTargetView</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Graphics\Base\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceState.h">
+      <Filter>Graphics\Base\ResourceState</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12Texture.h">
+      <Filter>Graphics\DirectX12\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12Converter.h">
+      <Filter>Graphics\DirectX12\Convertor</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTargetView.h">
+      <Filter>Graphics\Base\ResourceViews\RenderTargetView</Filter>
+    </ClInclude>
+    <ClInclude Include="DX12FrameBuffer.h">
+      <Filter>Graphics\DirectX12\FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayout.h">
+      <Filter>Graphics\Base\InputLayout</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
