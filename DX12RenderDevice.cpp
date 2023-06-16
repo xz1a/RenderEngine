@@ -180,12 +180,6 @@ RESULT DX12RenderDevice::CreateFrameBuffer(const FrameBufferDescription& p_descr
 }
 
 RESULT DX12RenderDevice::CreateShader(const ShaderDescription& p_description, Shader*& p_shader) const {
-
-	
-		/*const std::wstring& filename,
-		const D3D_SHADER_MACRO* defines,
-		const std::string& entrypoint,
-		const std::string& target)*/
 	const D3D_SHADER_MACRO* defines = nullptr;
 	UINT compile_flags = 0;
 	#if defined(DEBUG) || defined(_DEBUG)  

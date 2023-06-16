@@ -167,7 +167,7 @@ int main() {
 
 
 	window->Run();
-
+	
 	delete swapchain;
 	delete descriptor_heap_rtv;
 	delete descriptor_heap_dsv;
